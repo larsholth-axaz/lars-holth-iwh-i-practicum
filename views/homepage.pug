@@ -1,0 +1,23 @@
+doctype html
+html 
+    head 
+        title Custom Object Records | Integrating With HubSpot I Practicum
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Custom Object Records
+        p(style="margin-left: 1rem;")
+            a(href="/update-cobj") Add to this table
+        br
+        table(style="margin: 1rem; border-collapse: collapse; width: 80%;" border="1" cellpadding="8")
+            thead
+                tr(style="background-color: #f2f2f2; text-align: left;")
+                    th Name
+                    th Age
+                    th Type
+            tbody
+                each item in data
+                    tr
+                        td= item.properties.name
+                        td= item.properties.age
+                        td= item.properties.type
